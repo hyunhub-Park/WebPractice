@@ -1,0 +1,23 @@
+h1 {
+    display : none;
+}
+
+p {
+    font-size: xx-large;
+    font-weight: 900;
+    color: rgb(255, 0, 0);
+    border : 2px, solid, red;
+    padding : 20px;
+    border-radius: 20px;
+    background-color : rgb(211, 255, 109);
+}
+
+div#box
+{
+    width: 100px;
+    height: 100px;
+    background-color: blanchedalmond;
+    border: 3px solid black;
+    border-radius: 20px;
+    position: absolute;
+}
