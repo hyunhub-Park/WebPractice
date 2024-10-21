@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLE</TABLE></title>
+    <!--my_table안의 자식1 tr, 그 안의 자식 td(손자 개념)-->
+    <style>
+        #my_table
+        {
+            border: 1px solid blue;
+            margin: 0 auto; /*테이블 중앙 배치*/
+                            /*margin top은 비추천. table의 부모인 body에 padding-top을 주면 됨.*/
+        }
+
+        body /*body는 중복될 일 없으니 따로 #기입 안해도 됨.*/
+        {
+            padding-top: 100px;
+        }
+
+        #first
+        {
+            background-color:aquamarine;
+        }
+
+        #my_table td
+        {
+            border: 1px solid blue;
+            width: 100px;
+            text-align: center;
+            font-size: larger;
+            font-size: 80px;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <table id="my_table">
+        <tr id="first">
+            <!--td * 4 하면 됨.-->
+            <td>프라이</td>
+            <td>2000</td>
+            <td>중</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr id="second">
+            <td>음료</td>
+            <td>1500</td>
+            <td>&nbsp;</td>
+            <td>중</td>
+        </tr>
+    </table>
+    
+</body>
+</html>
