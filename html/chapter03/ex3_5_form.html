@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM DATA</title>
+    <style>
+        form
+        {
+            width: 600px;
+            border: 1px solid black;
+            margin: 0 auto;
+            /*overflow: hidden; width가 적을 경우, 메모가 넘치면 해당 문구 사용.*/
+            padding: 10px;
+        }
+
+        form div /*form속에 들어있는 div.*/
+        {
+            text-align: center;
+        }
+
+        label
+        {
+            display: inline-block;
+            width: 300px; /*inline이라서 속성 적용이 안됨. display: inline-block;으로 해야 함.*/
+            background-color: gainsboro;
+        }
+
+        textarea
+        {
+            margin-left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="display: none;">form data</h1>
+    <form action="#" method="post">
+        <label for="age">&lt;input&gt; 기본</label>
+        <input type="text" name="age" id="age"> <br>
+        
+        <label for="email">type="text" + 추가속성</label>
+        <input type="text" name="email" id="email" placeholder="HTML"> <br>
+        
+        <label for="id">type="text" + 아이디</label>
+        <input type="text" name="id" id="id" placeholder="아이디"> <br>
+        
+        <label for="pwd">type="text" + 패스워드</label>
+        <input type="password" name="pwd" id="pwd" placeholder="비밀번호"> <br>
+        
+        <label for="pwd">여러줄 문자 입력 : &lt;textarea&gt;</textarea></label> <br>
+        <textarea name="intro" id="intro" cols="30" rows="10">
+            문자
+        </textarea> <br>
+        
+        <div>
+            <button type="submit">서버전송</button> <!--새 창에서 열릴 수 있도록 변경해보기. anchor?-->
+            <button type="reset">전송취소</button>
+        </div>
+    </form>
+</body>
+</html>
