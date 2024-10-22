@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATE & TIME</title>
+    <style>
+        label
+        {
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!--tomcat server-->
+    <form action="serverPage.jsp" method="post">
+        <label for="month">Month</label>
+        <input type="month" name="month" id="month" value="2024-03"> <br>
+        
+        <label for="week">Week</label>
+        <!--<input type="week" name="week" id="week" value="2024-w15"> <br>-->
+        <input type="week" name="week" id="week"> <br>
+        
+        <label for="datetime-local">datetime-local</label>
+        <!--java는 datetime-local이라는 변수명이 없으므로, name은 변경하여.-->
+        <input type="datetime-local" name="datetimelocal" id="datetime-local"> <br>
+        
+        <label for="time">Time</label>
+        <input type="time" name="time" id="time"> <br>
+
+        <hr>
+
+        <button type="submit">send</button>
+        <button type="reset">cancel</button>
+    </form>
+</body>
+</html>
