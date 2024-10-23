@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIV INLINE TEST</title>
+    <style>
+        div
+        {
+            width: 80px;
+            height: 80px;
+            margin: 20px;
+            /*padding: 20px;*/
+        }
+
+        
+        div
+        {
+            background-color: brown;
+            display: block;
+        }
+        span
+        {
+            width: 80px;
+            height: 80px;
+            /*span(inline)에는 width, height, margin(top, bottom)이 먹히지 않음. ✔padding은 들어감(block처럼).*/
+            /*margine top, bottom이 먹히지 않음.*/
+            background-color: aquamarine;
+            display: inline; /*해당 설정을 지정하면 margine 모두 먹힘.*/
+            /*padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;*/
+        }
+    </style>
+</head>
+<body>
+    <!--block level-->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <br>
+
+    <!--inline level-->
+    <hr>
+
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+
+    <hr>
+
+</body>
+</html>
