@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX TEST</title>
+    <style>
+        .container
+        {
+            background-color: blanchedalmond;
+            height: 100vh; /*view port?? 눈에 보이는 사이즈.*/
+            border: 1px solid black;
+            display: flex;
+
+        }
+
+        .item
+        {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+        }
+
+        .item1
+        {
+            background-color: cadetblue;
+            /*padding: 20px;*/
+            /*order: 3;*/
+            /*flex-grow: 1;*/
+        }
+        .item2
+        {
+            background-color: rgb(116, 189, 192);
+            /*order: 1;*/
+            /*flex-shrink: 10;*/ /*줄어드는 비율이 다른 개체들에 비해 큼.*/
+            align-self: flex-end;
+        }
+        .item3
+        {
+            background-color: rgb(116, 189, 192);
+            /*order: 2;*/
+        }
+    </style>
+</head>
+<body>
+    <!--.container>div.item.item${$}*10-->
+
+    <div class="container">
+            <div class="item item1">item1</div>
+            <div class="item item2">item2</div>
+            <div class="item item3">item3</div>
+    </div>
+    
+</body>
+</html>
