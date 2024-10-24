@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLE TEST</title>
+    <style>
+        *
+        {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        table
+        {
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        table caption
+        {
+            font-size: 1.5em;
+        }
+
+        th, td
+        {
+            width: 200px;
+            padding: 10px 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        thead tr:first-child
+        {
+            background-color: aquamarine;
+        }
+
+        tfoot tr:last-child
+        {
+            background-color: azure;
+        }
+
+        tbody :nth-child(2n)
+        {
+            background-color: rgba(112, 255, 255, 0.3);
+        }
+
+        tbody tr:nth-child(2n):hover
+        {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!--table>(tr>td{&nbsp;}*3)*6-->
+    <table>
+        <caption>버거세트가격</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>치즈버거</td>
+                <td>4500</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>치즈버거</td>
+                <td>4500</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>치즈버거</td>
+                <td>4500</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>치즈버거</td>
+                <td>4500</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>치즈버거</td>
+                <td>4500</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>치즈버거</td>
+                <td>4500</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>치즈버거</td>
+                <td>4500</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>치즈버거</td>
+                <td>4500</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>치즈버거</td>
+                <td>4500</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>치즈버거</td>
+                <td>4500</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>너겟</td>
+                <td>25000</td>
+                <td>4개</td>
+            </tr>
+            <tr>
+                <td>프라이</td>
+                <td>2000</td>
+                <td>중</td>
+            </tr>
+            <tr>
+                <td>음료</td>
+                <td>1500</td>
+                <td>중</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th>가격</th>
+                <th>9500</th>
+                <th>할인</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
