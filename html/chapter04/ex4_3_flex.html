@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX TEST</title>
+    <style>
+        .container
+        {
+            /*div의 width는 body의*/
+            background-color: blanchedalmond;
+            /*background-color: rgba(red, green, blue, alpha);*/
+            height: 100vh; /*view port?? 눈에 보이는 사이즈.*/
+            width: 100vw;
+            border: 1px solid black;
+            display: flex; /*default row wrap인 것임.*/
+            /*flex-direction: row;
+            /*flex-direction: column-reverse;*/
+            /*flex-wrap: wrap;*/ /*줄바꿈이 됨.*/
+            /*flex-wrap: nowrap;
+            /*justify-content: left;*/
+            /*justify-content: flex-start; /*column-reverse를 하면 end가 아닌 flex-start로 바꿔줘야 함. 순서가 뒤집혔으니까.*/
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start; /*flex-end해도 됨.*/
+            /*align-items: end;*/ /*items와 content의 차이.*/
+            align-content: center;
+
+            /*align-items: baseline;*/ /*크기가 다르게 만들어진 item칸을 중앙으로??*/
+
+
+            /*
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center; -> 안되면 align-content: center;
+            */
+        }
+
+        .item
+        {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            margin-right: 10px;
+        }
+
+        .item1
+        {
+            background-color: cadetblue;
+            /*padding: 20px;*/
+        }
+        .item2
+        {
+            background-color: rgb(116, 189, 192);
+        }
+        .item3
+        {
+            background-color: rgb(119, 195, 197);
+        }
+        .item4
+        {
+            background-color: rgb(134, 220, 223);
+        }
+        .item5
+        {
+            background-color: rgb(151, 230, 233);
+        }
+        .item6
+        {
+            background-color: rgb(167, 239, 241);
+        }
+        .item7
+        {
+            background-color: rgb(172, 233, 235);
+        }
+        .item8
+        {
+            background-color: rgb(207, 245, 247);
+        }
+        .item9
+        {
+            background-color: rgb(213, 242, 243);
+        }
+        .item10
+        {
+            background-color: rgb(227, 244, 245);
+        }
+    </style>
+</head>
+<body>
+    <!--.container>div.item.item${$}*10-->
+
+    <div class="container">
+            <div class="item item1">item1</div>
+            <div class="item item2">item2</div>
+            <div class="item item3">item3</div>
+            <div class="item item4">item4</div>
+            <div class="item item5">item5</div>
+            <div class="item item6">item6</div>
+            <div class="item item7">item7</div>
+            <div class="item item8">item8</div>
+            <div class="item item9">item9</div>
+            <div class="item item10">item10</div>
+            
+            <div class="item item1">item1</div>
+            <div class="item item2">item2</div>
+            <div class="item item3">item3</div>
+            <div class="item item4">item4</div>
+            <div class="item item5">item5</div>
+            <div class="item item6">item6</div>
+            <div class="item item7">item7</div>
+            <div class="item item8">item8</div>
+            <div class="item item9">item9</div>
+            <div class="item item10">item10</div>
+            
+            <div class="item item1">item1</div>
+            <div class="item item2">item2</div>
+            <div class="item item3">item3</div>
+            <div class="item item4">item4</div>
+            <div class="item item5">item5</div>
+            <div class="item item6">item6</div>
+            <div class="item item7">item7</div>
+            <div class="item item8">item8</div>
+            <div class="item item9">item9</div>
+            <div class="item item10">item10</div>
+    </div>
+    
+</body>
+</html>

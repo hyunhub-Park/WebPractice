@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHILD</title>
+    <style>
+        div.my p
+        {
+            background-color: black;
+            color: aquamarine;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        div.my > p
+        /*div p -> 자손!*/
+        {
+            background-color: cadetblue;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            color: black;
+        }
+        /*rgba -> 명도도 조정 가능.*/
+    </style>
+</head>
+<body>
+    <h1>바나나</h1>
+    <figure>
+        <img src="media/phone.png" alt="바나나">
+        <figcaption>바나나</figcaption>
+    </figure>
+
+    <div class="my">
+        <!--p는 기본으로 1em의 마진을 가지고 있음. em은 부모것???-->
+        <p>노란색의 아열대 과일</p>
+
+        <div>
+            <p>지방이 없어 체중 조절에 좋음</p> <!--후손.-->
+        </div>
+
+        <p>식이섬유가 풍부해 주식 다음으로 적당</p>
+    </div>
+
+
+    
+</body>
+</html>

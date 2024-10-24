@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMBOBOX</title>
+</head>
+<body>
+    <!--<h1>키우고 싶은 동물은</h1> method 외부공개 안할 시post.-->
+    <form action="#" method="post">
+        <label for="ani">키우고 싶은 동물은</label>
+        <!--input name 등등 서버로 넘어갈 정보들.-->
+        <input type="text" name="ani" id="ani" list="animal"> <!--list까지 이름이 중복되면 안됨.-->
+        <!--'입력'도 가능.-->
+        <datalist id="animal">
+            <!--select option과 같음.-->
+            <option value="개">개</option>
+            <option value="고양이">고양이</option>
+            <option value="오리">오리</option>
+            <option value="코알라">코알라</option>
+        </datalist> <br>
+
+        <label for="ani2">키우고 싶은 동물은</label>
+        <!--'입력'은 안됨.-->
+        <select name="ani2" id="ani2">
+            <option value="개">개</option>
+            <option value="고양이">고양이</option>
+            <option value="오리">오리</option>
+            <option value="코알라">코알라</option>
+        </select> <br>
+
+        <button type="submit">서버 전송</button>
+        <button type="reset">전송 취소</button>
+    </form>
+</body>
+</html>

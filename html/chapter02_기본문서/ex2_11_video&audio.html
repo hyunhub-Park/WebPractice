@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIDEO & AUDIO</title>
+    <style>
+        div
+        {
+            width: 50%; /*상대값*/
+            border: 1px solid black;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2
+        {
+            background-color: darksalmon;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <h2>버거 패티 만드는 과정</h2>
+        <!--폭이나 세로를 주면 하나는 자동으로.-->
+        <video src="./media/buger1.mp4" alt = 버거 width="300px" controls></video>></video>
+    
+        <h2>버거 패티 만드는 동안 들을 노래</h2>
+        <audio src="./media/morning_vow.mp3" alt = 노래 controls></audio>
+        <!--<audio src="./media/morning_vow.mp3" alt = 노래 controls loop></audio> loop추가하면 무한루프.-->
+    
+        <h2>유튜브 동영상 연결</h2>
+        <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/p3Xphd_nV6g?si=Azy-yropChMLvR-W" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</body>
+</html>

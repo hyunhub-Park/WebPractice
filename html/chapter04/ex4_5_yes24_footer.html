@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YES24_FOOTER</title>
+    <style>
+        footer
+        {
+            border: 1px solid red;  /*상위에 한 줄만 생김.*/
+            /*height: 30vh;*/   /*높이 30vh의 redLine Box형식이 생김.*/
+        }
+
+        div.menu
+        {
+            width: 960px;
+            border: 1px dotted blue;
+            /*height: 100px;*/
+            margin: 0 auto; /*가운데로 배치.*/
+            /*menu_icon이 오른쪽으로 배치되는게 불가하기때문에 flex사용.*/
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between; /*menu_item과 menu_icon양 옆을 떨어뜨림.*/
+            align-items: center;    /*row기준으로 item과 icon을 가운데 정렬.*/
+        }
+
+        div.menu_item /*회사소개|인재채용 ...*/
+        {   /*menu가 이미 가운데 배치되었으므로, 따로 지정 안해도 되나봄!*/
+            width: 500px;
+            border: 1px solid black;
+            /*height: 50px;*/
+            padding: 5px;
+        }
+
+        div.menu_icon
+        {
+            width: 300px;
+            border: 1px solid gray;
+            display: flex;
+            align-items: flex-end;
+            align-items: center;
+            /*height: 50px;*/
+            padding: 5px;
+        }
+
+        .menu_item ul
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style-type: none;  /*말머리기호 삭제.*/
+            padding-left: 0px;  /*list는 기본적으로 여백을 가지고 있기 때문에 삭제 작업 필요.*/
+        }
+
+        .menu_item li a/*앵커는 inline이므로 폭, 높이 안먹힘.*/
+        {
+            text-decoration: none;  /*'소개'앵커의 underline삭제.*/
+                                    /*'가족회사'앵커의 underline삭제.*/
+            color: black;
+        }
+
+        .menu_icon a
+        {
+            text-decoration: none;  /*'소개'앵커의 underline삭제.*/
+                                    /*'가족회사'앵커의 underline삭제.*/
+            color: black;
+            border: 1px solid black;
+            background-color: bisque;
+            display: inline-block;  /*패딩 주는 것 가능.*/
+            /*아이콘 및 글자 배치를 오른쪽으로 정렬하기 위해 flex사용.*/
+            /*display: flex;*/
+            /*row, nowrap은 default*/
+            /*justify-content: end;
+            align-items: center;*/
+        }
+
+        div.menu_content
+        {
+            width: 960px;
+            border: 2px dotted blue;
+            margin: 0 auto; /*가운데로 배치.*/
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        div.menu_content_logo
+        {
+            width: 500px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        div.menu_content_qna
+        {
+            width: 400px;
+            border: 1px solid gray;
+        }
+
+        /*회사 로고 영역.*/
+        div.menu_company_logo
+        {
+            width: 960px;
+            border: 1px solid black;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-evenly;  /*균등하게.*/
+            align-items: center;
+        }
+
+        div.menu_company_logo_1
+        {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        /*최하단*/
+        div.menu_last
+        {
+            width: 960px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+
+        div.menu_last p
+        {
+            font-size: x-small;
+        }
+
+    </style>
+</head>
+<body>
+    <footer>
+        <!--div.menu-->
+        <div class="menu">
+            <div class="menu_item">
+                <!--ul>li{a}*10-->
+                <ul>
+                    <!--alt + shift 같은 단어 한번에 지우기.-->
+                    <li><a href="#" target="_blank">소개</a></li>
+                    <li><a href="#" target="_blank">소개</a></li>
+                    <li><a href="#" target="_blank">소개</a></li>
+                    <li><a href="#" target="_blank">소개</a></li>
+                    <li><a href="#" target="_blank">소개</a></li>
+                    <li><a href="#" target="_blank">소개</a></li>
+                    <li><a href="#" target="_blank">소개</a></li>
+                    <li><a href="#" target="_blank">소개</a></li>
+                    <li><a href="#" target="_blank">소개</a></li>
+                    <li><a href="#" target="_blank">소개</a></li>
+                </ul>
+            </div>
+
+            <div class="menu_icon">
+                <!--<img src="media/cake1.png" alt="아이콘">-->
+                <img src="media/cherry.png" alt="아이콘" width="30px">
+                <img src="media/cherry.png" alt="아이콘" width="30px">
+                <img src="media/cherry.png" alt="아이콘" width="30px">
+                <img src="media/cherry.png" alt="아이콘" width="30px">
+                <a href="#" target="_blank">가족회사소개</a>
+            </div>
+        </div>
+            <div class="menu_content">
+                <div class="menu_content_logo">
+                    <div class="menu_content_logo_yes">
+                        <img src="media/apple.png" alt="yes24" width="50px">
+                    </div>
+                    <div class="menu_content logo_addr">
+                        <p>
+                                대표 <br> 주소 <br> 사업자등록번호 <br> 이메일 <br>
+                        </p>
+                    </div>
+                 </div>
+                 <div class="menu_content_qna">
+                    <h4>고객문의</h4>
+                    <p>
+                        고객문의 <br>
+                        고객문의 <br>
+                        고객문의 <br>
+                    </p>
+                    <div>
+                        <a href="#" target="_blank">1:1문의하기</a>
+                        <a href="#" target="_blank">1:1문의하기</a>
+                        <a href="#" target="_blank">1:1문의하기</a>
+                    </div>
+                 </div>
+            </div>
+            <div class="menu_company_logo">
+                <div class="menu_company_logo_1">
+                    <p>
+                        <img src="media/bread.png" alt="회사1" width="60px"> <br>
+                        한국산업의 <br>
+                        15년 연속 1위
+                    </p>
+                </div>
+                <div class="menu_company_logo_1">
+                    <p>
+                        <img src="media/bread.png" alt="회사1" width="60px"> <br>
+                        한국산업의 <br>
+                        15년 연속 1위
+                    </p>
+                </div>
+                <div class="menu_company_logo_1">
+                    <p>
+                        <img src="media/bread.png" alt="회사1" width="60px"> <br>
+                        한국산업의 <br>
+                        15년 연속 1위
+                    </p>
+                </div>
+                <div class="menu_company_logo_1">
+                    <p>
+                        <img src="media/bread.png" alt="회사1" width="60px"> <br>
+                        한국산업의 <br>
+                        15년 연속 1위
+                    </p>
+                </div>
+                <div class="menu_company_logo_1">
+                    <p>
+                        <img src="media/bread.png" alt="회사1" width="60px"> <br>
+                        한국산업의 <br>
+                        15년 연속 1위
+                    </p>
+                </div>
+                <div class="menu_company_logo_1">
+                    <p>
+                        <img src="media/bread.png" alt="회사1" width="60px"> <br>
+                        한국산업의 <br>
+                        15년 연속 1위
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <div class="menu_last">
+                    <p>
+                        소비자피해보상보험 소비자피해보상보험 소비자피해보상보험 소비자피해보상보험 소비자피해보상보험
+                    </p>
+                </div>
+            </div>
+    </footer>
+</body>
+</html>
