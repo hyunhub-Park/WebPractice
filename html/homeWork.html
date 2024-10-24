@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOMEWORK</title>
+    <script src="https://kit.fontawesome.com/b551008ea2.js" crossorigin="anonymous"></script>
+
+    <style>
+        *
+        {
+            box-sizing: border-box; /*border기준으로 크기를 정하기 때문에, margin은 포함 안됨.*/
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body
+        {
+            font-family: Georgia, 'Times New Roman', Times, serif;            
+        }
+
+        nav
+        {
+            width: 90%;
+            margin: 0 auto; /*가운데정렬을 위한 사이드 마진!!!!*/
+            padding: 10px;
+            border-style: outset;
+            border-radius: 20px;
+            display: flex;
+            /*가운데정렬*/
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .title
+        {
+            display: flex;
+            align-items: center;
+            font-size: 15pt;
+        }
+        
+        .title a
+        {
+            font-size: 20pt;
+        }
+
+        .icons a
+        {
+            font-size: 20pt;
+        }
+
+        
+        ul.menu
+        {
+            display: flex;
+            padding: 8px 12px;
+            border-radius: 10px;
+        }
+
+        .menu li
+        {
+            list-style-type: none;
+            color: black;
+        }
+        
+        .menu a
+        {
+            color: black;
+            font-size: 15pt;
+        }
+
+        .menu a:hover
+        { /*크기 줘보기.*/
+            background-color: rgb(253, 232, 205);
+            margin: 5px;    /*margin으로 인해 커서를 올렸을 때, 옆 개체가 영향을 받음!*/
+            border-radius: 10px;
+        }
+        
+        ul.icons
+        {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*.icons a
+        {
+            color: palevioletred;
+        }*/
+        
+        a
+        {
+            text-decoration: none;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="title">
+            <a href="#"><i class="fa-solid fa-heart"></i></a>
+            <p>WEB CODING</p>
+        </div>
+
+        <ul class="menu">
+            <li><a href="homeWork.html" target="_self">menu1</a></li>
+            <li><a href="homeWork.html" target="_self">menu2</a></li>
+            <li><a href="homeWork.html" target="_self">menu3</a></li>
+            <li><a href="homeWork.html" target="_self">menu4</a></li>
+        </ul>
+
+        <ul class="icons">
+            <li><a href="#"><i class="fa-solid fa-headphones"></i></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-droplet"></i></a></li>
+        </ul>
+    </nav>
+</body>
+</html>
