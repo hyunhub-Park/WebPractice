@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPACITY</title>
+    <style>
+        img
+        {
+            border: 3px solid black;
+            opacity: 0.3;
+        }
+
+        img:hover /*커서를 가져다 두었을 때,*/
+        {
+            opacity: 1;
+        }
+
+        /*nth-child 가상클래쓰.*/
+        div > img:nth-child(3) /*3번째.*/
+        {
+            visibility: hidden; /*눈에 보이지만 않을 뿐, 공간은 있음.*/
+        }
+        div > img:nth-child(2) /*2번째.*/
+        {
+            visibility: none; /*눈에 보이지만 않고, 공간도 없음.*/
+        }
+        div > img:nth-child(2n) /*짝수, 홀수-(2n+1), 3의 배수-(3n)*/
+        {
+            border: 5px dotted red;
+        }
+
+        div>img:first-child, div>img:last-child
+        {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <img src="media/font/font_h.png" alt="">
+        <img src="media/font/font_t.png" alt="">
+        <img src="media/font/font_m.png" alt="">
+        <img src="media/font/font_l.png" alt="">
+        <img src="media/font/font_h.png" alt="">
+        <img src="media/font/font_t.png" alt="">
+        <img src="media/font/font_m.png" alt="">
+        <img src="media/font/font_l.png" alt="">
+    </div>
+</body>
+</html>
