@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOIST TEST</title>
+    <script>
+        //  var 변수 선언 호이스트
+        //  var name; -> undefine. var name = "psh";라는 식으로 값을 줘도 var만 상위로 올라옴.
+        //  값이 아닌 '선언'만 올라옴.
+        //  let은 올라오지 않음.
+        console.log('name : ', name);
+        console.log(typeof name);
+        var name = "psh";   // console이 상위임에도 var의 내용이 출력됨.
+        // console.log('name : ', name);
+    </script>
+</head>
+<body>
+    <h1>테스트</h1>
+</body>
+</html>
