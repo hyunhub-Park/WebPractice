@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENT TEST 2</title>
+    <script>
+        let count = 0;
+        function changeColor(colorName)
+        {
+            // window.alert(colorName);    // 항상 실행이 잘 되는지 테스트를 위한 alert.
+            /*let h1Obj = window.document.getElementsByTagName("h1"); // h1이라는 'tagName'으로 찾는 것.
+            window.console.log("h1Obj", h1Obj);*/
+
+            count++;
+            
+            let h1Array = window.document.getElementsByTagName("h1"); // h1이라는 'tagName'으로 찾는 것.
+            // 왜 배열로오지? h1은 나만 가지는게 아니니까. 공통은 class, tag. 혼자만 id.
+            // id - element, h1 - elements.
+            // name은 서버로 보내야하니까, form말고는 없음. 따라서 name을 주면 id를 줄 필요 없음. label 예외.
+            window.console.log("h1Obj", h1Obj);
+            h1Array[0].style.color = colorName;
+            h1Array[0].textContent = colorName;
+
+            let size = (count%2===0) ? ("72px"):("24px");
+
+            h1Array[1].style.backgroundColor = colorName;
+            h1Array[2].style.fontSize = size;
+        }
+    </script>
+</head>
+<body>
+    <h1>Change Color</h1>
+    <h1>Change Background</h1>
+    <hr>
+
+    <button type="button" onclick="changeColor('red')">red</button>
+    <button type="blue" onclick="changeColor('blue')">blue</button>
+    <button type="yellow" onclick="changeColor('yellow')">yellow</button>
+    <button type="green" onclick="changeColor('green')">green</button>
+</body>
+</html>
