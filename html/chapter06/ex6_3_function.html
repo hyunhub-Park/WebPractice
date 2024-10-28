@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTION TEST</title>
+</head>
+<body>
+    <script>
+        // 함수 선언(번호를 선택하면 같은 번호의 이미지를 출력.).
+        function select1(number)
+        {
+            if (number >= 1 && number <= 3)
+            {
+                //🤷‍♀️🤷‍♀️🤷‍♀️🤷‍♀️🤷‍♀️🤷‍♀️🤷‍♀️🤷‍♀️🤷‍♀️🤷‍♀️
+                window.document.write("<img src='media/food" + number + "png' alt='햄버거'>");
+                return true;
+            } else
+            {
+                window.document.write('해당 번호의 상품이 없습니다.');
+                return false;
+            }
+        }
+
+        // 변수 선언
+        let number, flag;
+        number = parseInt(prompt("햄버거=1, 피자=2, 튀김=3", "1"));
+        flag = window.select1(number); // 윈도우 객체로 만든 함수. 윈도우에 들어있는 멤버변수.
+        if (flag === true)
+        {
+            window.document.write("식사 맛있게 하세요.")
+
+        } else
+        {
+            window.document.write("해당 번호로 주문할 수 없습니다.")
+        }
+    </script>
+    <!--<img src="media/food1.png" alt="햄버거">-->
+</body>
+</html>
