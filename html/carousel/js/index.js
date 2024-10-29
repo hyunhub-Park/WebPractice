@@ -10,7 +10,7 @@ function carousel ()
     let pre = document.querySelector(".pre");
     let next = document.querySelector(".next");
 
-    let anchor_in_indicator = document.querySelectorAll(".slideShow");
+    let anchor_in_indicator = document.querySelectorAll(".slideShow_indicator a");
 
     // 현재 이미지인덱스, 인터벌 아이디, 슬라이드 개수 체크.
     let currentIndex = 0;   // 첫 시작.
@@ -22,9 +22,8 @@ function carousel ()
     {
         // 🤷‍♀️🤷‍♀️🤷‍♀️🤷‍♀️🤷‍♀️🤷‍♀️ viewPort 는 고정인거고 당연히!!!!!!!!!!!!
         // 🤷‍♀️🤷‍♀️🤷‍♀️🤷‍♀️🤷‍♀️🤷‍♀️ z-index기능.
-        let newLeft = `${i*100}`;
+        let newLeft = `${i*100}%`;
         anchor_in_slides[i].style.left = newLeft;
-
     }
 
     // 화면 전환 함수.
@@ -65,7 +64,7 @@ function carousel ()
     });
 
     slideShow_slides.addEventListener("mouseleave", (event) =>
-    {   // 마우스 올렸을 때 멈추는.
+    {
         startTimer();        
     });
 
@@ -75,7 +74,7 @@ function carousel ()
     });
 
     pre.addEventListener("mouseleave", (event) =>
-    {   // 마우스 올렸을 때 멈추는.
+    {
         startTimer();        
     });
 
@@ -85,7 +84,7 @@ function carousel ()
     });
 
     next.addEventListener("mouseleave", (event) =>
-    {   // 마우스 올렸을 때 멈추는.
+    {
         startTimer();        
     });
 
@@ -110,7 +109,6 @@ function carousel ()
         if (currentIndex > (slideCount - 1))
         {
             currentIndex = 0;
-
         }
         gotoSlide(currentIndex);
     });
@@ -142,12 +140,22 @@ function carousel ()
     }
 
     // anchor_in_indicator.forEach ((obj) => 
+    //  {
+    //      obj.addEventListener("mouseleave", (event) => 
+    //      {
+    //          clearInterval(timerID);
+    //      });
+    //  });
+
+
+    // anchor_in_indicator.forEach((obj, index) =>
+    // {
+    //     obj.addEventListener("click",(event) =>
     //     {
-    //         obj.addEventListener("mouseleave", (event) => 
-    //         {
-    
-    //         });
+    //         event.preventDefault();
+    //         gotoSlide(index);
     //     });
+    // });
 
     for (let i = 0; i < slideCount; i++)
     {

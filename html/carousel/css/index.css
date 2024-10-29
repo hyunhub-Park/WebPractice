@@ -7,13 +7,7 @@
     padding: 0px;
 }
 
-body
-{
-
-}
-
 /* carousel */
-
 div.slideShow
 {
     background-color: rgba(255, 98, 145, 0.473);
@@ -50,9 +44,11 @@ div.slideShow_nav a
     position: absolute;
     left: 50%;
     top: 50%;
-    color: rgba(255, 255, 255, 0.877);
+    /* color: rgba(255, 255, 255, 0.877); */
+    color: white;
     font-size: 62px;
     transform: translateY(-50%);
+    opacity: 0.5;
 }
 
 div.slideShow_nav a.pre
@@ -62,7 +58,7 @@ div.slideShow_nav a.pre
 
 div.slideShow_nav a.next
 {
-    margin-right: 400px;
+    margin-left: 400px;
 }
 
 div.slideShow_indicator
@@ -73,6 +69,7 @@ div.slideShow_indicator
     text-align: center;
     left: 0;
     right: 0;
+    text-align: center;
 }
 
 div.slideShow_indicator a
