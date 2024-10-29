@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATE EVENT TEST</title>
+</head>
+
+<body>
+    <!-- method : CRUD -->
+    <form action="#" method="get">
+        <p>궁금한 날짜를 입력하세요 : </p>
+                                        <!-- year는 4글자만 작성. -->
+        <input type="number" name="year" id="year" size="10" maxlength="8"> <br>
+        <!-- <input type="month" name="month" id="month"> -->
+         <input type="number" name="month" id="month" size="10" maxlength="8"> <br>
+         <!-- min, max 적으면 창 크기가 작아짐. -->
+         <input type="number" name="day" id="day" size="10" maxlength="8"> <br>
+         <button type="button" onclick="calculateDate();">계산</button>
+    </form>
+
+    <p id="today"></p>
+    <p id="result"></p>
+    <div id="result2">
+
+    </div>
+
+    <!-- 객체를 찾아야하므로 뒤로 뺌. -->
+    <script>
+        function calculateDate ()
+        {
+            // '계산'버튼 클릭하면 반응하는 팝업.
+            // alert(`테스트`);
+            // 잠깐 사용 후 버리면 되기 때문에, 해당 함수 안에 선언해도 O.
+            // UI객체를 querySelector로 가져옴.
+            // const yearObj = window.document.querySelector("ul li");로 할거면 querySelectorAll로 가져와야 함. 그러면 li를 배열로 가져옴! 
+            const yearObj = window.document.querySelector("#year").value;
+            const monthObj = window.document.querySelector("#month").value;
+            const dayObj = window.document.querySelector("#day").value;
+            const todayObj= window.document.querySelector("#today");
+            const resultObj = window.document.querySelector("#result");
+
+            // 전부 문자열로 읽음. 따라서 parseInt작업 해줘야 함.
+            // todayObj.textContent = yearObj.value + monthObj.value + dayObj.value;
+            todayObj.textContent = parseInt(yearObj.value) + parseInt(monthObj.value) + dayObj.value;
+            todayObj.textContent = `<b>${parseInt(yearObj.value) + parseInt(monthObj.value) + dayObj.value}<b>`;
+            resultObj.innerHTML = `<b>${parseInt(yearObj.value) + parseInt(monthObj.value) + dayObj.value}<b>`;
+            
+            // 현재 날짜.
+            const currentDay = new Date();
+
+            // 사용자가 입력한 날짜.
+            let numMonth = parseInt(monthObj)-1;
+            let numYear = parseInt(yearObj);
+            let numDay = parseInt(dayObj);
+            const userDay = new Date(numYear, numMonth, numDay);
+
+            // 현재 날짜 출력.
+            todayObj.textContent = `${currentDay.toLocaleString()}`;
+            
+            // 날짜 계산하기 (사용자가 입력한 날짜) - (현재 날짜)
+            const timeDifference = (userDay - currentDay)/(1000*60*60*24);
+            resultObj.innerHTML = `${Math.floor(timeDifference)}일 남았음.`;
+            
+            console.log('timeDifferentce', timeDifference);
+            console.log('userDay', userDay);
+            console.log('currentDay', currentDay);
+            
+            let strDate1 = `${currentDay.toLocaleDateString()} <br>`;
+            let strDate2 = `${Math.floor(timeDifference)}일 남았음.`;
+            let strDate3 = strDate1.concat(strDate2);
+
+            const divArea = document.querySelector("#result2");
+            divArea.innerHTML = strDate3;
+            divArea.style.border = "1px solid black";
+            // document.querySelector("#result2").innerHTML = strDate3;
+        }
+
+
+    </script>
+    
+</body>
+</html>
