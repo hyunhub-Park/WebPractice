@@ -32,7 +32,7 @@ ul
 }
 
 /* ul속 자식 li, li속에 a가 모두 들어있음. */
-ul li a
+ul > li > a
 {
     display: inline-block;
     width: 100px;
@@ -40,10 +40,11 @@ ul li a
     text-align: center;
 }
 
-ul li:hover
+ul > li:hover > a
 {
     background-color: rgb(92, 93, 175);
 }
+
 .dropDown
 {
     position: relative;
@@ -57,7 +58,6 @@ ul li:hover
     background-color: #d6d2e4;
     min-width: 160px;
     z-index: 1;
-
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 }
 
