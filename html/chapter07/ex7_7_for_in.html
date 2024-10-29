@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR & IN TEST</title>
+
+    <script>
+        // 객체 생성.
+        let person = new Array();
+        person.name = "psh";
+        person.age = "30";
+        person.height = "158";
+
+        // 배열은 of, 객체는 in !!!!
+        for (let data in person)
+        {
+            document.write(`person[${data}] = ${person[data]} <br>`);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
