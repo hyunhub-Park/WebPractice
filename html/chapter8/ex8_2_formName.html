@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM NAME TEST</title>
+</head>
+<style>
+    b
+    {
+        color: brown;
+    }
+</style>
+
+
+<body>
+    <!-- <form action="serverName(login.hph or jsp같이.)" method="post" name="login"> -->
+    <form action="#" method="get" name="login">
+    <label for="userID">사용자 ID</label> <br>
+                                            <!-- input의 형제 - span br -->
+        <input type="text" name="userID" id="userID"><span></span><br>
+        <label for="pwd">패스워드</label> <br>
+        <input type="password" name="userpwd" id="pwd"><span></span><br>
+        <!-- <button type="button">log in</button> -->
+        <!-- <button type="submit">log in</button> -->
+        <button type="button">log in</button>
+    </form>
+
+    <script>
+        // // 이벤트를 설정할 객체 찾음.
+        // // 객체 찾음.
+        const btnObj = document.querySelector('[type="button"]');
+          
+        // // 이벤트 설정. onclick.
+        // // event , handler
+        // // btnObj.addEventListener("click", function()
+        // // {
+                                
+        // // });
+        // // event , handler
+        // btnObj.addEventListener("click", () => 
+        // {
+        //     // alert(`button event!`);
+        //     const userID = document.login.userID;
+        //     const pwd = document.querySelector("#pwd");
+        //     // const userID = document.querySelector("#userID");
+        //     // alert(`${userID.value}`);
+        //     if (userID.value.length < 8 || userID.value.length > 14)
+        //     {
+        //                 // span을 가리킴..
+        //         userID.nextSibling.innerHTML = `<b>8글자 이상, 14글자 미만으로 다시 작성해주세요.</b>`;
+
+        //         userID.value = "";
+        //         userID.focus();
+        //         return;
+        //     } else
+        //     {
+        //         userID.nextSibling.innerHTML = `<b>아이디 성공!</b>`;
+        //     }
+            
+        //     if (pwd.value.length < 8 || pwd.value.length > 12)
+        //     {
+        //                 // span을 가리킴..
+        //         pwd.nextSibling.innerHTML = `<b>8글자 이상, 12글자 미만으로 다시 작성해주세요.</b>`;
+
+        //         pwd.value = "";
+        //         pwd.focus();
+        //         return;
+        //     } else
+        //     {
+        //         pwd.nextSibling.innerHTML = `<b>패스워드 성공!</b>`;
+        //     }
+
+        //     alert("성공");
+        // });
+
+        btnObj.addEventListener("click", check);
+
+
+        // 이름없는 함수는 let test = function check () 이런식으로 주면 됨!
+        // 화살표 함수로도 할 수 있음! 버튼 클릭 시 이벤트도 호이스팅 관련하여 라인별 호출 주의.
+        // let check () =>
+        function check ()
+        {
+
+            // 이벤트를 설정할 객체 찾음.
+        // 객체 찾음.
+        // const btnObj = document.querySelector('[type="button"]');
+          
+          // 이벤트 설정. onclick.
+          // event , handler
+          // btnObj.addEventListener("click", function()
+          // {
+                                  
+          // });
+          // event , handler
+
+          btnObj.addEventListener("click", () => 
+          {
+              // alert(`button event!`);
+              const userID = document.login.userID;
+              const pwd = document.querySelector("#pwd");
+              // const userID = document.querySelector("#userID");
+              // alert(`${userID.value}`);
+              if (userID.value.length < 8 || userID.value.length > 14)
+              {
+                          // span을 가리킴..
+                  userID.nextSibling.innerHTML = `<b>8글자 이상, 14글자 미만으로 다시 작성해주세요.</b>`;
+  
+                  userID.value = "";
+                  userID.focus();
+                  return;
+              } else
+              {
+                  userID.nextSibling.innerHTML = `<b>아이디 성공!</b>`;
+              }
+              
+              if (pwd.value.length < 8 || pwd.value.length > 12)
+              {
+                          // span을 가리킴..
+                  pwd.nextSibling.innerHTML = `<b>8글자 이상, 12글자 미만으로 다시 작성해주세요.</b>`;
+  
+                  pwd.value = "";
+                  pwd.focus();
+                  return;
+              } else
+              {
+                  pwd.nextSibling.innerHTML = `<b>패스워드 성공!</b>`;
+              }
+  
+              alert("성공");
+          });
+        }
+    </script>
+</body>
+</html>
