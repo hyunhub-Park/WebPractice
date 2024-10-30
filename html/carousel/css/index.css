@@ -30,7 +30,7 @@ div.slideShow_slides
 
 div.slideShow_slides a
 {
-    /* absolute해버리면 원래 block이 됨. 다 겹쳐졌는데, 옆배치를 해야하니 diplay inline block으로. */
+    /* absolute해버리면 원래 block이 됨. 다 겹쳐졌는데, 옆배치를 해야하니 display inline block으로. */
     position: absolute;
     /* 부모의 몇%를 차지하는가? */
     width: 100%;    /*부모것 다 차지하겠다. 960px*/
