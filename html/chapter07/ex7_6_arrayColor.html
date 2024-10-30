@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY COLOR TEST</title>
+
+    <script>
+        // 배경색 문자열 선언.
+        const letter = "01234567ABCDEF";
+
+        let count = 0;
+        let intervalID = null;
+        function changeDivColor ()
+        {   // 선언적 함수.
+
+            if (count++ > 25)
+            {
+                clearInterval(intervalID);
+                return;
+            }
+            
+            let color = "#";
+            // 배경색 만들기.
+            for (let i = 0; i < 6; i++)
+            {
+                const index = Math.floor(Math.random()*(15-0+1)+0);
+                // letter라는 배열에 있는 인덱스.
+                // 왜 color += letter[index];는 안되지.....
+                color = color + letter[index];
+            }
+            document.write(`<div style="background-color : ${color}"><p>${color}</p></div>`);
+        }
+
+        // let color = "#";
+        // // 배경색 만들기.
+        // for (let i = 0; i < 6; i++)
+        // {
+        //     const index = Math.floor(Math.random()*(15-0+1)+0);
+        //             // letter라는 배열에 있는 인덱스.
+        //     // 왜 color += letter[index];는 안되지.....
+        //             color = color + letter[index];
+        // }
+
+        // document.write(`<div style="background-color : ${color}"><p>${color}</p></div>`);
+
+        // 자동으로 실행한다.
+        intervalID = setInterval(changeDivColor, 1000);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

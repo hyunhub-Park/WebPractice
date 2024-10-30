@@ -1,0 +1,89 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    /* 폰트사이즈, 구글폰트, 글자 간격, 배경색 */
+}
+
+a
+{
+    text-decoration: none;
+    color: white;
+}
+
+/* 본격 메뉴 CSS */
+ul
+{
+    border: 1px dotted black;
+    list-style: none;
+    background-color: rgb(49, 49, 143);
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left; */
+    align-items: center;
+}
+
+/* ul속 자식 li, li속에 a가 모두 들어있음. */
+ul > li > a
+{
+    display: inline-block;
+    width: 100px;
+    padding: 16px 16px;
+    text-align: center;
+}
+
+ul > li:hover > a
+{
+    background-color: rgb(92, 93, 175);
+}
+
+.dropDown
+{
+    position: relative;
+}
+
+/* 기준을 dropDown으로 잡고 떠버리는!!! */
+.dropdown-content
+{
+    display: none;  /*영역까지 사라짐.*/
+    position: absolute;
+    background-color: #d6d2e4;
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+div.dropdown-content a
+{
+    display: block;
+    padding: 16px 16px;
+    /* min-width: 160px; */
+    /* width: 160px; */
+}
+
+div.dropdown-content a:hover
+{
+    background-color: rgb(92, 93, 175);
+}
+
+.dropDown:hover .dropdown-content
+{
+    display: block;
+}
+
+/* 헤드 부분. */
+.head
+{
+    width: 1200px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: rgb(17, 17, 124);
+}

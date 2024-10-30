@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--doc의 뿌리는 html, html객체 안에는 body가 있는 것이고.-->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT TEST</title>
+    <!--내부 Javascript, style처럼.-->
+    <script>
+        window.document.write("내부 자바스크립트로 작성한다.")
+
+    </script>
+    <!--외부 Javascript-->
+    <script src="ex_6_1_javascript.js">
+    </script>
+
+    <!--외부스타일-->
+    <!--<link rel="stylesheet" href="style.css">-->
+</head>
+<body>
+    <!--listener & handler-->
+    <!--a 객체에 이벤트 등록해라 → onclick같은 리스너.-->
+    <!--handler → 이름있는 클래스, 임시객체, 람다식--lp>
+    <a href="#" onclick="window.document.write('<p>발생하면 작동할 이벤트 핸들러 함수 호출 요청! 이 함수는 javascript에만 있음.<p>');">
+        여기를 눌러보세요.
+    </a>
+    <br>
+    <a href="javascript:alert('anchor tag에서 작동한 것.');">
+        여기도 눌러보세요.
+    </a>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH6 62PAGE</title>
+    <script>
+        function randomFood ()
+        {
+            // '금액입력' 객체를 가져온다.
+            let priceObj = window.document.getElementById("price");
+            
+            // '금액입력'이 1200원 미만이면 경고창 리턴.
+            //  입력해서 들어오는 값은 모두다!! 문자임.
+            //  let price = priceObj.value + 100; 하면 1200100이 나옴. html탭에서 F12후 확인.
+            let price = window.parseInt(priceObj.value);
+            if (price < 1200)
+            {
+                // window.alert(`${price} 가격으로는 주문 불가.`);
+                window.alert(price + "가격으로는 주문불가입니다.");
+                return; // 끝내는 것.
+            }
+            window.console.log("price", price);
+            // '금액입력'이 1200원 이상이면 음식을 몇 개 줄 수 있는지 파악.
+            // let count = price / 1200;
+            // let count = Math.ceil(price/1200);
+            let count = Math.floor(price/1200);
+            let total = count*1200;
+            let change = price - total; // 잔돈.
+            window.console.log("count", count);
+            
+            //  금액/1200 -> 몫(개수).  
+            
+            //  개수만큼 음식이미지를 보여준다.
+            for (let i = 0; i < count; i++)
+            {
+                // 램덤 수를 잡아냄.
+                let num = Math.floor(Math.random()*(3-1+1)+1);
+                document.write(`${i+1}번 음식 : <img src="media/food${num}.png" width="100px">`);   // document.write니까 새로운 창에서 열리는 것.
+            }
+
+            //  총액, 잔액 출력.          
+            document.write("<hr>");
+            document.write(`<p>총액 : ${total} / 잔액 : ${change} </p>`);
+            window.console.log("count", count);
+        }
+    </script>
+</head>
+<body>
+    <p>음식 1개당 1200원 입니다. 주문하고 싶은 금액을 입력해주세요.</p>
+    <form action="#" method="get">
+        <label for="price">금액입력</label>
+        <input type="number" name="price" id="price" max="100000" min="1000">
+        <button type="button" onclick="randomFood();">order</button>
+    </form>
+</body>
+</html>

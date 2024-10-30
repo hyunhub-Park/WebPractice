@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTION HOIST TEST</title>
+    <script>
+        // 선언보다 호출이 우선시 돼도, 올라감.
+        // 아래 함수 방식만!
+        // messagePrint();
+
+        messagePrint();
+        messagePrint2();    //  안올라감.
+        messagePrint3();    //  올라감. (위의 print2를 주석처리 해주면.)
+
+        /*호이스팅 : var, 이름이 있는 함수, 화살표 함수*/
+
+        //  이름이 있는 함수.
+        function messagePrint ()
+        {
+            console.log("message1");
+        }
+        // messagePrint();
+
+        //  이름이 없는 함수.(익명 함수)
+        let messagePrint2 = function ()
+        {
+            console.log("message2");
+        }
+        // messagePrint();
+        // messagePrint2();
+
+        //  화살표 함수.
+        let messagePrint3 = () => console.log("message3");
+        messagePrint3();    //  이건 호출 됨.
+    </script>
+</head>
+<body>
+    <h1>함수 HOIST 테스트</h1>
+    
+</body>
+</html>
