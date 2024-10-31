@@ -30,6 +30,37 @@
         // // 이벤트를 설정할 객체 찾음.
         // // 객체 찾음.
         const btnObj = document.querySelector('[type="button"]');
+
+        let check = ()=>
+        {
+            const userID = document.login.userID;
+            const pwd = document.querySelector("#pwd");
+
+            if(userID.value.length < 8 || userid.value.length > 14)
+            {
+                userID.nextSibling.innerHTML = `<b>8글자 미만이나 14글자 초과안됩니다</b>`;
+                userID.value = "";
+                userID.focus(); 
+                return; 
+            }else
+            {
+                userid.nextSibling.innerHTML = `<b>성공</b>`;
+            }
+            if(pwd.value.length < 8 || pwd.value.length > 12)
+            {
+                pwd.nextSibling.innerHTML = `<b>8글자 미만이나 12글자 초과안됩니다</b>`;
+                pwd.value = "";
+                pwd.focus(); 
+                return; 
+            } else
+            {
+                pwd.nextSibling.innerHTML = `<b>성공</b>`;
+            }
+           alert("입력체크성공으로 서버전송하겠습니다."); 
+        }
+        
+        //이벤트 설정한다. onClick
+        btnObj.addEventListener("click", check);        
           
         // // 이벤트 설정. onclick.
         // // event , handler
@@ -74,63 +105,62 @@
         //     alert("성공");
         // });
 
-        btnObj.addEventListener("click", check);
+        // btnObj.addEventListener("click", check);
 
 
-        // 이름없는 함수는 let test = function check () 이런식으로 주면 됨!
-        // 화살표 함수로도 할 수 있음! 버튼 클릭 시 이벤트도 호이스팅 관련하여 라인별 호출 주의.
-        // let check () =>
-        function check ()
-        {
-
-            // 이벤트를 설정할 객체 찾음.
-        // 객체 찾음.
-        // const btnObj = document.querySelector('[type="button"]');
+        // // 이름없는 함수는 let test = function check () 이런식으로 주면 됨!
+        // // 화살표 함수로도 할 수 있음! 버튼 클릭 시 이벤트도 호이스팅 관련하여 라인별 호출 주의.
+        // // let check () =>
+        // function check ()
+        // {
+        //     // 이벤트를 설정할 객체 찾음.
+        // // 객체 찾음.
+        // // const btnObj = document.querySelector('[type="button"]');
           
-          // 이벤트 설정. onclick.
-          // event , handler
-          // btnObj.addEventListener("click", function()
-          // {
+        //   // 이벤트 설정. onclick.
+        //   // event , handler
+        //   // btnObj.addEventListener("click", function()
+        //   // {
                                   
-          // });
-          // event , handler
+        //   // });
+        //   // event , handler
 
-          btnObj.addEventListener("click", () => 
-          {
-              // alert(`button event!`);
-              const userID = document.login.userID;
-              const pwd = document.querySelector("#pwd");
-              // const userID = document.querySelector("#userID");
-              // alert(`${userID.value}`);
-              if (userID.value.length < 8 || userID.value.length > 14)
-              {
-                          // span을 가리킴..
-                  userID.nextSibling.innerHTML = `<b>8글자 이상, 14글자 미만으로 다시 작성해주세요.</b>`;
+        //   btnObj.addEventListener("click", () => 
+        //   {
+        //       // alert(`button event!`);
+        //       const userID = document.login.userID;
+        //       const pwd = document.querySelector("#pwd");
+        //       // const userID = document.querySelector("#userID");
+        //       // alert(`${userID.value}`);
+        //       if (userID.value.length < 8 || userID.value.length > 14)
+        //       {
+        //                   // span을 가리킴..
+        //           userID.nextSibling.innerHTML = `<b>8글자 이상, 14글자 미만으로 다시 작성해주세요.</b>`;
   
-                  userID.value = "";
-                  userID.focus();
-                  return;
-              } else
-              {
-                  userID.nextSibling.innerHTML = `<b>아이디 성공!</b>`;
-              }
+        //           userID.value = "";
+        //           userID.focus();
+        //           return;
+        //       } else
+        //       {
+        //           userID.nextSibling.innerHTML = `<b>아이디 성공!</b>`;
+        //       }
               
-              if (pwd.value.length < 8 || pwd.value.length > 12)
-              {
-                          // span을 가리킴..
-                  pwd.nextSibling.innerHTML = `<b>8글자 이상, 12글자 미만으로 다시 작성해주세요.</b>`;
+        //       if (pwd.value.length < 8 || pwd.value.length > 12)
+        //       {
+        //                   // span을 가리킴..
+        //           pwd.nextSibling.innerHTML = `<b>8글자 이상, 12글자 미만으로 다시 작성해주세요.</b>`;
   
-                  pwd.value = "";
-                  pwd.focus();
-                  return;
-              } else
-              {
-                  pwd.nextSibling.innerHTML = `<b>패스워드 성공!</b>`;
-              }
+        //           pwd.value = "";
+        //           pwd.focus();
+        //           return;
+        //       } else
+        //       {
+        //           pwd.nextSibling.innerHTML = `<b>패스워드 성공!</b>`;
+        //       }
   
-              alert("성공");
-          });
-        }
+        //       alert("성공");
+        //   });
+        // }
     </script>
 </body>
 </html>
