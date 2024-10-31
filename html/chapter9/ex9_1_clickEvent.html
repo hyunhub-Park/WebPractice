@@ -23,8 +23,9 @@
             const imgObj = document.querySelector('[src="media/food1.png"]');
 
             // 이벤트 리스너 등록 및 핸들러 기능.
-            imgObj.addEventListener("click", () =>
+            imgObj.addEventListener("click", (event) =>
             {
+                console.log('event : ', event);
                 deg += 90;
                 // alert(`테스트`);
                 imgObj.style.transform = `rotate(${deg}deg)`;
