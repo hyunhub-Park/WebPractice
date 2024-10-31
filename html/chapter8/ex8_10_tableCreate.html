@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLE CREATE</title>
+    <style>
+        div
+        {
+            border: 1px solid black;
+            width: 300px;
+        }
+    </style>
+
+    <script>
+        function onLoad ()
+        {
+            // 변수.
+            let count = 0;
+            let flag = false;
+
+            // 객체 찾기.
+            const divObj = document.querySelector("div");
+            const btnObj = document.querySelector("button");
+
+            // 테이블 추가.
+            const table = document.createElement("table");
+            table.style.border = "1px solid black";
+            table.style.borderCollapse = "collapse";
+            table.style.margin = "0 auto"
+            divObj.appendChild(table);
+
+            // 이벤트 처리 추가.
+            btnObj.addEventListener("click", () =>
+            {
+                // document.tr이런식으로 원래 만들어줘야 하는데, 테이블을 만들어주는 기능이 있음.
+                const row = table.insertRow(count);
+                row.style.border = "1px solid balck";
+                
+                const td0 = row.insertCell(0);
+                td0.style.border = "1px solid balck";
+                
+                const td1 = row.insertCell(1);
+                td1.style.border = "1px solid balck";
+                
+                if (flag === false)
+                {
+                    td0.textContent = `원래 셀`;
+                    td1.textContent = `원래 셀`;
+                    flag = true;
+                } else
+                {
+                    td0.textContent = `추가 셀 ${count}`;
+                    td1.textContent = `추가 셀 ${count}`;
+                }
+                count++;
+            });
+        }
+    </script>
+</head>
+
+<body onload="onLoad();">
+    <div>
+
+    </div>
+
+    <hr>
+
+    <button>열 추가</button>
+    
+</body>
+</html>
