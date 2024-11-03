@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEFORE UNLOAD TEST</title>
+    <script>
+        // 창에 이벤트를 거는 것이기 때문에, window.
+        // window에 거는 것이기 때문에 body에 unload필요 없음.
+        window.addEventListener("beforeunload", (e) =>
+        {
+            const message = `페이지 이동 시, 내용이 모두 사라집니다.`;
+
+            e.returnValue = message;
+
+            return message;
+
+        });
+    </script>
+</head>
+<body>
+    <h1>페이지 이동 시, 경고창 발생.</h1>
+    <a href="ex9_4_beforeUnload.html" target="_blank">이동</a>
+    
+</body>
+</html>
