@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NODE CREATE TEST</title>
+
+    <style>
+        div
+        {
+            border: 1px solid black;
+            width: 300px;
+        }
+    </style>
+
+    <script>
+        function onLoad ()
+        {
+            // 객체 찾기.
+            const divObj = document.querySelector("div");
+            const btnObj = document.querySelector('[type="button"]');
+
+            // 이벤트 리스너 등록 및 핸들러 처리.
+                                            // 이름 있는, 없는, 화살표 함수 모두 들어갈 수 있음.
+            btnObj.addEventListener("click", () =>
+            {
+                // a node 생성.
+                const aTag = document.createElement("a");
+                const brTag = document.createElement("br");
+                aTag.href = "https://daum.net";
+                aTag.target = "_blank";
+                aTag.textContent = "'다음'으로 이동.";
+                aTag.style.textDecoration = "none";
+                aTag.style.padding = "10px";
+                aTag.style.display = "inline-block";
+                aTag.style.backgroundColor = "red";
+                aTag.style.border = "1px solid yellow"
+                
+                // c8 31p
+                divObj.appendChild(aTag);
+                divObj.appendChild(brTag);
+
+            });
+        }
+    </script>
+</head>
+<body onload="onLoad();">
+    <div>
+        <h2>사이트 추가하기</h2>
+        <hr>
+    </div>
+    <!-- <a href="https://daum.net" target="_blank">'다음'으로 이동.</a> -->
+    <button type="button">노드 추가하기</button>
+    
+</body>
+</html>
