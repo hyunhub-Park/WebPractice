@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCATION TEST</title>
+</head>
+<body>
+    <!-- ch10_30p -->
+
+    <h1>현재 페이지는 location객체를 테스트하고있습니다.</h1>
+
+    <form action="#" method="get">
+        <input type="number" name="site" id="site" max="2" min="0">
+    </form>
+    <button type="button">요청하기</button>
+    <button type="button" id="cancel">취소하기</button>
+    
+
+    <script>
+        // 변수 선언.
+        const siteArray = new Array();
+        let win = null;
+        siteArray[0] = "https://www.naver.com";
+        siteArray[1] = "https://www.nate.com";
+        siteArray[2] = "https://www.daum.net";
+
+        // 객체 찾기.
+        const number = document.querySelector('[type="number"]');
+        const btn = document.querySelector('[type="button"]');
+        const btncancel = document.querySelector('#cancel');
+
+        // 이벤트 리스너 등록 및 핸들러 처리.
+        btn.addEventListener("click", () =>
+        {
+            // 가져온 값은 모두 문자열이므로, 정수로 변경 필요.
+            const no = window.parseInt(number.value);
+
+            if (no < 0 || no >= 3)
+            {
+                alert("0~3사이의 숫자를 입력하시오.");
+                return;
+            }
+
+            win = window.open(siteArray[no], "_blank", "width=400, height=400, left=100, top100");
+        });
+
+        btncancel.addEventListener("click", () =>
+        {
+            // win = window.close;
+            win.close;
+        });
+
+
+        // // 앵커 사용 없이도 페이지를 자동으로 전환할 수 있는 것.
+        // let count = 0;
+        // const timerID = setInterval(() =>
+        // {
+        //     if (win !== null)
+        //     {
+        //         win.close
+        //     }
+        //     count++;
+
+        //     if (count > 10)
+        //     {
+        //         clearInterval(timerID);
+        //     }
+        // }, 2000);
+    </script>
+</body>
+</html>
