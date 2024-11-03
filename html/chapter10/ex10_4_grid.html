@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID TEST</title>
+    <style>
+        /* 부모가 배치를 시킴. */
+        .container
+        {
+            box-sizing: border-box;
+            width: 450px;
+            margin: 0 auto;
+            background-color: aquamarine;
+            border: 1px solid royalblue;
+            display: grid;
+            /* justify-content대신에 grid */
+            grid-template-columns: repeat(3, 150px);
+            grid-template-rows: repeat(2, 100px);
+        }
+
+        .item
+        {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- 위치를 순서도로 지정하는 것. -->
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>
